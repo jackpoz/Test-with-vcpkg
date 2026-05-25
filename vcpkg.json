@@ -1,0 +1,53 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+  "name": "arcdps-personal-stats",
+  "version-string": "2.2rc2",
+  "dependencies": [
+    "cpr",
+    "grpc",
+    "gtest",
+    "jemalloc",
+    "nlohmann-json",
+    "prometheus-cpp",
+    "spdlog",
+    "imgui",
+    "arcdps-mock",
+    {
+      "name": "arcdps-extension",
+      "default-features": false,
+      "features": [
+        "imgui"
+      ]
+    }
+  ],
+  "overrides": [
+    {
+      "name": "arcdps-extension",
+      "version": "2.1.0"
+    },
+    {
+      "name": "arcdps-mock",
+      "version": "0.2.0"
+    },
+    {
+      "name": "c-ares",
+      "version": "1.18.1"
+    },
+    {
+      "name": "curl",
+      "version": "8.7.1"
+    },
+    {
+      "name": "cpr",
+      "version": "1.10.5#2"
+    },
+    {
+      "name": "civetweb",
+      "version": "1.15#1"
+    },
+    {
+      "name": "imgui",
+      "version": "1.92.7"
+    }
+  ]
+}
