@@ -15,7 +15,7 @@ project ("Test with vcpkg")
 add_executable (CMakeTarget "Test with vcpkg.cpp" "Test with vcpkg.h")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
-  set_property(TARGET CMakeTarget PROPERTY CXX_STANDARD 20)
+  set_property(TARGET CMakeTarget PROPERTY CXX_STANDARD 23)
 endif()
 
 # TODO: Add tests and install targets if needed.
