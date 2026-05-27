@@ -14,9 +14,9 @@ jobs:
         run: |
           if ((Test-Path 'D:\') -and (Test-Path 'C:\vcpkg')) {
             Copy-Item -Path 'C:\vcpkg' -Destination 'D:\vcpkg' -Recurse -Force
+            Add-Content -Path $env:GITHUB_PATH -Value 'D:\vcpkg'
+            Add-Content -Path $env:GITHUB_ENV -Value "VCPKG_ROOT=D:/vcpkg"
           }
-
-          Add-Content -Path $env:GITHUB_PATH -Value 'D:\vcpkg'
 
       - uses: actions/checkout@v6
 
