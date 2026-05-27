@@ -12,7 +12,7 @@ jobs:
       - name: Move vcpkg to D drive
         shell: pwsh
         run: |
-          if (Test-Path 'D:\' -and Test-Path 'C:\vcpkg') {
+          if ((Test-Path 'D:\') -and (Test-Path 'C:\vcpkg')) {
             Copy-Item -Path 'C:\vcpkg' -Destination 'D:\vcpkg' -Recurse -Force
           }
 
